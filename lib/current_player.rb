@@ -1,6 +1,6 @@
-def turn_count (boardArray)
-  turnsPlayed = 0
-  boardArray.each do |token|
+def turn_count(board)
+  count = 0
+  board.each do |token|
     if token == "X" || token == "O"
       turnsPlayed += 1
     end
