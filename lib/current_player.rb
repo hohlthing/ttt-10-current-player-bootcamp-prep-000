@@ -1,14 +1,14 @@
 def turn_count(board)
   count = 0
-  board.each do |token|
-    if token == "X" || token == "O"
-      turnsPlayed += 1
+  board.each do |move|
+    if move == "X" || move == "O"
+      count += 1
     end
   end
-  return turnsPlayed
+  return count
 end
 
-def current_player (boardArray)
-  remainder = turn_count(boardArray) % 2
+def current_player(board)
+  remainder = turn_count(board) % 2
   remainder == 0 ? "X" : "O"
 end
